@@ -1,0 +1,22 @@
+services:
+  # Servicio para el entorno de desarrollo
+  web_dev:
+    build:
+      context: .  # Contexto del directorio donde está el Dockerfile
+      dockerfile: Dockerfile.dev  # Dockerfile para desarrollo
+    ports:
+      - "8000:8000"  # Mapea el puerto 8000 del contenedor al 8000 de la máquina host
+    volumes:
+      - .:/app  # Sincroniza tu directorio local con el contenedor
+    environment:
+      - DEBUG=True  # Variables de entorno para desarrollo
+
+  # Servicio para el entorno de producción
+  web_prod:
+    build:
+      context: .  # Contexto del directorio donde está el Dockerfile
+      dockerfile: Dockerfile.prod  # Dockerfile para producción
+    ports:
+      - "8001:8000"  # Cambia el puerto para evitar conflictos
+    environment:
+      - DEBUG=False  # Variables de entorno para producción
