@@ -23,3 +23,7 @@ Asegúrate de tener [Docker](https://www.docker.com/get-started) instalado en tu
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/tu_usuario/django_workspace.git
+   cd django_workspace```
+
+### Docker Hub
+Este proyecto está disponible en Docker Hub bajo el nombre **`my_django_repo`**. Puedes encontrarlo en [Docker Hub](https://hub.docker.com/r/tu_usuario/my_django_repo).
